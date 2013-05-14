@@ -11,6 +11,10 @@
     text-align: right;
 }
 
+.float-right {
+    float: right;
+}
+
 
 /* Slider Gallery */
 .gallery-slider {

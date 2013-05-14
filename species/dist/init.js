@@ -14,7 +14,7 @@
                 easing			: 'easeOutBounce',
                 duration		: 1200,
                 opacityClass    : 'lof-opacity',
-                auto            : true,
+                auto            : false,
                 buttons			: buttons,
                 wapperSelector  : '.gallery-slider-wrap-inner',
                 toggleElement   : '#content'
