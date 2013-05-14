@@ -1,3 +1,4 @@
+/* Base classes */
 .h2 {
     font-size: 150%;
 }
@@ -8,4 +9,14 @@
 
 .text-right {
     text-align: right;
+}
+
+
+/* Slider Gallery */
+.gallery-slider {
+    min-height: 275px;
+}
+
+.gallery-slider-content-outer {
+    position: relative;
 }

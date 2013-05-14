@@ -39,27 +39,40 @@
     <link rel="stylesheet" data-rel="kinetic-stylesheet" type="text/kss"
           href="http://wwws2.eea.europa.eu/portal_kss/EEADesign2006/ploneStyles1366211324773200035.kss"/>
     <script type="text/javascript"
-            src="http://wwws4.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584930145025.js"/>
+            src="http://wwws4.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584930145025.js">
+        </script>
     <script type="text/javascript"
-            src="http://wwws4.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584930280924.js"/>
+            src="http://wwws4.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584930280924.js">
+
+    </script>
     <script type="text/javascript"
-            src="http://wwws2.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584932917118.js"/>
+            src="http://wwws2.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584932917118.js">
+    </script>
     <script type="text/javascript"
-            src="http://wwws2.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584932981014.js"/>
+            src="http://wwws2.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584932981014.js">
+    </script>
+
     <script type="text/javascript"
-            src="http://wwws3.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584935079098.js"/>
+            src="http://wwws3.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584935079098.js">
+            </script>
     <script type="text/javascript"
-            src="http://wwws3.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584937069893.js"/>
+            src="http://wwws3.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584937069893.js">
+            </script>
     <script type="text/javascript"
-            src="http://wwws1.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584939060926.js"/>
+            src="http://wwws1.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584939060926.js">
+            </script>
     <script type="text/javascript"
-            src="http://wwws3.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584939368963.js"/>
+            src="http://wwws3.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584939368963.js">
+            </script>
     <script type="text/javascript"
-            src="http://wwws4.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584940510035.js"/>
+            src="http://wwws4.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584940510035.js">
+            </script>
     <script type="text/javascript"
-            src="http://wwws1.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584941287041.js"/>
+            src="http://wwws1.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584941287041.js">
+            </script>
     <script type="text/javascript"
-            src="http://wwws4.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584942039967.js"/>
+            src="http://wwws4.eea.europa.eu/portal_javascripts/EEADesign2006/ploneScripts1366896584942039967.js">
+            </script>
     <link rel="shortcut icon" type="image/x-icon"
           href="http://www.eea.europa.eu/favicon.ico"/>
     <link rel="apple-touch-icon"
@@ -109,6 +122,8 @@
 
     <!-- Custom styles needed for Species page -->
     <link rel='stylesheet' href='style.css' />
+    <!-- Custom js needed for Species page -->
+    <script type="text/javascript" src="init.js"></script>
 </head>
 
 <!-- EEA Header placeholder  -->
@@ -835,7 +850,25 @@
 
                     <!-- END EEA Breadcrumbs -->
 
-                    <img src="./gallery_image.jpg" />
+                    <div class="gallery-slider">
+                        <div class="gallery-slider-content-outer">
+                    <ul class="gallery-slider-wrap-inner">
+                        <li>
+                            <img src="./gallery_image.jpg" />
+                        </li>
+                        <li>
+                            <img src="./gallery_image2.jpg" />
+                        </li>
+                        <li>
+                            <img src="./gallery_image3.jpg" />
+                        </li>
+                    </ul>
+                            </div>
+                        </div>
+                    <div class='gallery-slider-controls'>
+                        <a href="#" class='button-next'>Next</a>
+                        <a href="#" class='button-prev'>Previous</a>
+                    </div>
                     <p class='text-right'>
                         <a href="#">More images</a>
                     </p>
