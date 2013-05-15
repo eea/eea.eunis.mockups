@@ -17,7 +17,7 @@
                 auto            : false,
                 buttons			: buttons,
                 wapperSelector  : '.gallery-slider-wrap-inner',
-                toggleElement   : '#content'
+                toggleElement   : '#dummy'
 
             }
         );
