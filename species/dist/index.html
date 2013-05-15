@@ -868,6 +868,7 @@
                     <div class='gallery-slider-controls'>
                         <a href="#" class='button-next'>Next</a>
                         <a href="#" class='button-prev'>Previous</a>
+                        <a href="#" class='hiddenElement' id="dummy"> </a>
                     </div>
                     <p class='text-right'>
                         <a href="#">More images</a>
@@ -969,11 +970,129 @@
 
                 <div class='column-area'>
                     <h3>Protected Sites (Natura 2000) - Table</h3>
-                    <div>Table</div>
+                    <table class="datatable listing inline-block"
+                            style='height: 312px'>
+                        <thead>
+                        <tr>
+                            <th style="cursor: pointer;"><span class="sort ">
+                            Country</span></th>
+                            <th
+                                    style="cursor: pointer;"><span class="sort ">
+                            Site name</span></th>
+                            <th
+                                    style="cursor: pointer;">Area (ha)<span
+                                    class="sort"> </span></th>
+                            <th
+                                    style="cursor: pointer;"># species<span
+                                    class="sort"> </span></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="odd">
+                            <td>Greece</td>
+                            <td>Paranesti virgin forest</td>
+                            <td>2343</td>
+                            <td>453</td>
+                        </tr>
+                        <tr class="even">
+                            <td>Portugal</td>
+                            <td>Panta de Sages</td>
+                            <td>233</td>
+                            <td>34</td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Greece</td>
+                            <td>Paranesti virgin forest</td>
+                            <td>2343</td>
+                            <td>453</td>
+                        </tr>
+                        <tr class="even">
+                            <td>Portugal</td>
+                            <td>Panta de Sages</td>
+                            <td>233</td>
+                            <td>34</td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Greece</td>
+                            <td>Paranesti virgin forest</td>
+                            <td>2343</td>
+                            <td>453</td>
+                        </tr>
+                        <tr class="even">
+                            <td>Portugal</td>
+                            <td>Panta de Sages</td>
+                            <td>233</td>
+                            <td>34</td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Greece</td>
+                            <td>Paranesti virgin forest</td>
+                            <td>2343</td>
+                            <td>453</td>
+                        </tr>
+                        <tr class="even">
+                            <td>Portugal</td>
+                            <td>Panta de Sages</td>
+                            <td>233</td>
+                            <td>34</td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Greece</td>
+                            <td>Paranesti virgin forest</td>
+                            <td>2343</td>
+                            <td>453</td>
+                        </tr>
+                        <tr class="even">
+                            <td>Portugal</td>
+                            <td>Panta de Sages</td>
+                            <td>233</td>
+                            <td>34</td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Greece</td>
+                            <td>Paranesti virgin forest</td>
+                            <td>2343</td>
+                            <td>453</td>
+                        </tr>
+                        <tr class="even">
+                            <td>Portugal</td>
+                            <td>Panta de Sages</td>
+                            <td>233</td>
+                            <td>34</td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Greece</td>
+                            <td>Paranesti virgin forest</td>
+                            <td>2343</td>
+                            <td>453</td>
+                        </tr>
+                        <tr class="even">
+                            <td>Portugal</td>
+                            <td>Panta de Sages</td>
+                            <td>233</td>
+                            <td>34</td>
+                        </tr>
+                        <tr class="odd">
+                            <td>Greece</td>
+                            <td>Paranesti virgin forest</td>
+                            <td>2343</td>
+                            <td>453</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
 
                 <div class='right-column-area'>
-                    <div>Map with tabs</div>
+                    <ul class="eea-tabs">
+                        <li>Protected sites - Map</li>
+                    </ul>
+                    <div class="eea-tabs-panels">
+
+                        <div class="eea-tabs-panel">
+                            <img src='biogeograpical-service.png' />
+                        </div>
+
+                    </div>
                 </div>
 
                 <!-- END EEA Species Protection -->
@@ -1019,11 +1138,74 @@
 
                 <h2>Areas where this species has been reported</h2>
                 <div class='column-area'>
-                    <div>Layer Selection</div>
+                    <fieldset>
+                        <legend><strong>Select layer</strong></legend>
+
+                        <label for="distribution-range">
+                            <input type="checkbox" name="checkbox"
+                               id="distribution-range">
+                            Distribution range(2012,
+                            source: Art 17 Habitat Directive)
+                        </label>
+                        <p class='discreet'>User friendly explanation on why
+                            one
+                            should select this data layer</p>
+
+                        <label>
+                            <input type="checkbox" name="checkbox2">
+                            Distribution range(2010, source: IUCN)
+                        </label>
+                        <p class='discreet'>User friendly explanation on why
+                            one
+                            should select this data layer</p>
+
+                        <label>
+                            <input type="checkbox" name="checkbox3">
+                            Single observations (1800-now, source: GBIF)
+                        </label>
+                        <p class='discreet'>User friendly explanation on why
+                            one
+                            should select this data layer</p>
+                        <label>
+                            <input type="checkbox" name="checkbox4">
+                            Protected sites where species is reported(2011,
+                            source: Natura 2000)
+                        </label>
+                        <p class='discreet'>User friendly explanation on why
+                            one
+                            should select this data layer</p>
+
+                        <p>Base map - not species related</p>
+                        <label>
+                            <input type="checkbox" name="checkbox5">
+                            All nationally designated sites (2012, source:
+                            CDDA)
+                        </label>
+                        <p class='discreet'>User friendly explanation on why
+                            one
+                            should select this data layer</p>
+
+                    </fieldset>
                 </div>
 
                 <div class='right-column-area'>
-                    <div>Map with tabs</div>
+                    <ul class="eea-tabs">
+                        <li>Map</li>
+                        <li>Data table</li>
+                    </ul>
+                    <div class="eea-tabs-panels">
+
+                        <div class="eea-tabs-panel">
+                            <img src='biogeograpical-service.png' />
+                            <p>Map depicts reported distribution of
+                                species by Member States</p>
+                            <a href='#'>Source: Art 17 Habitat Directive</a>
+                        </div>
+                        <div class="eea-tabs-panel">
+                            Content for second tab
+                        </div>
+
+                    </div>
                 </div>
 
                 <!-- END EEA Species reported -->
@@ -1031,7 +1213,7 @@
                 <!-- EEA Habitat types -->
 
                 <h2 class='visualClear'>... and habitat types</h2>
-                <table class="datatable listing" id="tabledef">
+                <table class="datatable listing">
                     <thead>
                     <tr><th style="cursor: pointer;">Detailed reference<span class="sort "> </span></th><th style="cursor: pointer;">Legal text<span class="sort "> </span></th><th
                             style="cursor: pointer;">Comments<span
