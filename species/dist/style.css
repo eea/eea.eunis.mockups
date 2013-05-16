@@ -1,5 +1,14 @@
 /* Base classes */
+
+.h1 {
+    font-size: 250%;
+}
+
 .h2 {
+    font-size: 200%;
+}
+
+.h3 {
     font-size: 150%;
 }
 
@@ -29,8 +38,46 @@
     position: relative;
 }
 
+/* Threat status */
+.threat-status-indicator div {
+    padding: 1em;
+}
+
+/* Unknown threat status */
+.threat-status-un {
+    background-color: #cccccc;
+    color: #000;
+}
+
+/* Vulnerable threat status */
+.threat-status-vu {
+    background-color: #ea9999;
+    color: #000;
+}
+
+/* Critically endangered threat status */
+.threat-status-cr {
+    background-color: #990000;
+    color: #FFF;
+}
+
+.threat-status-region {
+
+}
+
+.threat-status-label {
+    font-weight: bold;
+}
+
+.threat-status-source {
+
+}
+
+
 /* overrides */
 
 .column-area, .right-column-area {
     width: 48%;
 }
+
+
