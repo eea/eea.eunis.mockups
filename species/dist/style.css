@@ -28,3 +28,9 @@
 .gallery-slider-content-outer {
     position: relative;
 }
+
+/* overrides */
+
+.column-area, .right-column-area {
+    width: 48%;
+}
