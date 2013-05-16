@@ -1,7 +1,7 @@
 /* Base classes */
 
 .h1 {
-    font-size: 250%;
+    font-size: 300%;
 }
 
 .h2 {
@@ -23,9 +23,15 @@
 .float-right {
     float: right;
 }
-
+.bold p {
+    font-size: 110%;
+}
 .inline-block, #content .inline-block {
     display: inline-block;
+}
+
+.firstParagraph {
+    margin-top: 3em;
 }
 
 
