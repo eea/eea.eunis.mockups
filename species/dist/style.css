@@ -43,6 +43,11 @@
     padding: 1em;
 }
 
+#content .threat-status-indicator p {
+    margin-bottom: 0;
+}
+
+
 /* Unknown threat status */
 .threat-status-un {
     background-color: #cccccc;
@@ -79,5 +84,15 @@
 .column-area, .right-column-area {
     width: 48%;
 }
+.listing th a, .listing th a:link, .listing th a:visited {
+    color: #FFF !important;
+}
 
-
+.sortable th span,
+.listing th span {
+    display: inline;
+    float: left;
+}
+.sortable th a:link, .listing th a:link {
+    float: left;
+}
