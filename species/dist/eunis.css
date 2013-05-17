@@ -58,16 +58,27 @@
     margin-bottom: 0;
 }
 
+/* Unknown and Data Deficient threat status */
+.threat-status-un, .threat-status-dd {
+    background-color: #D4D8D7;
+    color: #000;
+}
 
-/* Unknown threat status */
-.threat-status-un {
-    background-color: #cccccc;
+/* Least Concern threat status */
+.threat-status-lc {
+    background-color: #F9DFDE;
+    color: #000;
+}
+
+/* Near Threatened threat status */
+.threat-status-nt {
+    background-color: #F2BFBB;
     color: #000;
 }
 
 /* Vulnerable threat status */
 .threat-status-vu {
-    background-color: #ea9999;
+    background-color: #EE9B93;
     color: #000;
 }
 
@@ -75,9 +86,15 @@
     color: #8E004D;
 }
 
+/* Endangered threat status */
+.threat-status-en {
+    background-color: #E2665C;
+    color: #000;
+}
+
 /* Critically endangered threat status */
 .threat-status-cr {
-    background-color: #990000;
+    background-color: #D52C27;
     color: #FFF;
 }
 
@@ -88,6 +105,19 @@
 #content .threat-status-cr a:hover {
     color: #FF9090 !important; /* important because of override from base.css */
 }
+
+/* Extinct in the Wild threat status */
+.threat-status-ew {
+    background-color: #A21D22;
+    color: #FFF;
+}
+
+/* Extinct threat status */
+.threat-status-ex {
+    background-color: #000;
+    color: #FFF;
+}
+
 .threat-status-region {
 
 }
