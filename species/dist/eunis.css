@@ -148,3 +148,16 @@
 .sortable th a:link, .listing th a:link {
     float: left;
 }
+
+.threat-status-indicator .table-definition {
+    padding: 0;
+}
+
+.table-definition-target {
+    background: url("http://www.eea.europa.eu/accordion_up.png") no-repeat scroll right center #346F83;
+    padding-right: 2em;
+}
+
+.table-definition-target.opened {
+    background: url("http://www.eea.europa.eu/accordion_down.png") no-repeat scroll right center #346F83;
+}
