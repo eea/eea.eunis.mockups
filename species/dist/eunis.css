@@ -49,6 +49,11 @@
     padding: 1em;
 }
 
+.threat-status-indicator .roundedCorners {
+    border: 2px solid #4B4B4B;
+    border-radius: 10px;
+}
+
 #content .threat-status-indicator p {
     margin-bottom: 0;
 }
@@ -66,12 +71,23 @@
     color: #000;
 }
 
+#content .threat-status-vu a {
+    color: #8E004D;
+}
+
 /* Critically endangered threat status */
 .threat-status-cr {
     background-color: #990000;
     color: #FFF;
 }
 
+#content .threat-status-cr a {
+    color: #ea9999;
+}
+
+#content .threat-status-cr a:hover {
+    color: #FF9090 !important; /* important because of override from base.css */
+}
 .threat-status-region {
 
 }
