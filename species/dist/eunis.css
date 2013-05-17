@@ -161,3 +161,7 @@
 .table-definition-target.opened {
     background: url("http://www.eea.europa.eu/accordion_down.png") no-repeat scroll right center #346F83;
 }
+
+.overlay {
+    background-color: #FFF;
+}

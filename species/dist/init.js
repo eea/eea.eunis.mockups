@@ -22,7 +22,17 @@
             }
         );
 
+        // table definition dropdown
         $('.table-definition-target').click(function () { showDefinition(this);});
+
+        // overlay helper from plone
+        $('.threat-status-cr').find('a').prepOverlay({
+            subtype: 'iframe'
+        });
+
+        // normal jquerytools overlay which checked the rel attribute for overlay
+        // id to open on click
+        $('.threat-status-vu').find('a').overlay();
 
     });
 
