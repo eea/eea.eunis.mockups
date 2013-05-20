@@ -39,33 +39,37 @@
 .gallery-slider {
     display: block;
     height: 275px;
+    margin-top: 0.5em;
     overflow: hidden;
-    width: 485px;
     position: relative;
+    width: 485px;
 }
 
 .gallery-slider-wrapper {
+    border: 1px solid #000;
+    box-shadow: 2px 2px 4px #000;
+    height: 97%;
+    overflow: hidden;
     position: relative;
-    height: 100%;
     width: 100%;
     z-index: 3px;
-    overflow: hidden;
 }
 
 .gallery-slider-wrapper-inner,
 #content .gallery-slider-wrapper-inner {
-    padding: 0;
     margin: 0;
-    position: absolute;
-    overflow: hidden;
     margin-left: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
 }
 
+#content .gallery-slider-wrapper-inner li,
 .gallery-slider-wrapper-inner li {
+    float: left;
+    margin-bottom: 0px;
     overflow: hidden;
     padding: 0px;
-    margin: 0px;
-    float: left;
     position: relative;
 }
 
@@ -74,23 +78,23 @@
 }
 
 .gallery-slider .button-next, .gallery-slider .button-prev {
-    display: block;
-    width: 30px;
     color: #FFF;
     cursor: pointer;
-    position: absolute;
+    display: block;
     height: 100%;
-    z-index: 40;
-    top: 0;
+    position: absolute;
     text-indent: -999px;
+    top: 0;
+    width: 30px;
+    z-index: 40;
 }
 .gallery-slider .button-prev {
-    left: 0px;
     background: url(button-gallery-previous.png) no-repeat left center;
+    left: 0px;
 }
 .gallery-slider .button-next {
-    right: 9px;
     background: url(button-gallery-next.png) no-repeat right center;
+    right: 9px;
 }
 
 /* Threat status */
@@ -213,4 +217,8 @@
 
 .overlay {
     background-color: #FFF;
+}
+
+#portal-breadcrumbs {
+    font-weight: bold;
 }
