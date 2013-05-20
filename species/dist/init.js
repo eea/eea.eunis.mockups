@@ -7,16 +7,17 @@
             next     : $('.gallery-slider-controls .button-prev')
         };
 
-        $('.gallery-slider').lofJSidernews(
+        $('.gallery-slider').lofJSliderNews(
             {
                 interval        : 4000,
-                direction		: 'opacity',
-                easing			: 'easeOutBounce',
+                direction		: 'slide', // use 'opacity' if you want items to fade
+                easing			: 'easeInOutQuad',
                 duration		: 1200,
                 opacityClass    : 'lof-opacity',
-                auto            : 'true',
+                auto            : true,
                 buttons			: buttons,
-                wapperSelector  : '.gallery-slider-wrap-inner',
+                mainWidth       : 470,
+                wrapperSelector  : '.gallery-slider-wrapper-inner',
                 toggleElement   : '#dummy'
 
             }

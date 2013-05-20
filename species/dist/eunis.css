@@ -37,7 +37,36 @@
 
 /* Slider Gallery */
 .gallery-slider {
-    min-height: 275px;
+    display: block;
+    height: 275px;
+    overflow: hidden;
+    width: 485px;
+    position: relative;
+}
+
+.gallery-slider-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 3px;
+    overflow: hidden;
+}
+
+.gallery-slider-wrapper-inner,
+#content .gallery-slider-wrapper-inner {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    overflow: hidden;
+    margin-left: 0;
+}
+
+.gallery-slider-wrapper-inner li {
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    position: relative;
 }
 
 .gallery-slider-content-outer {
