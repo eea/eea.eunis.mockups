@@ -73,6 +73,26 @@
     position: relative;
 }
 
+.gallery-slider .button-next, .gallery-slider .button-prev {
+    display: block;
+    width: 30px;
+    color: #FFF;
+    cursor: pointer;
+    position: absolute;
+    height: 100%;
+    z-index: 40;
+    top: 0;
+    text-indent: -999px;
+}
+.gallery-slider .button-prev {
+    left: 0px;
+    background: url(button-gallery-previous.png) no-repeat left center;
+}
+.gallery-slider .button-next {
+    right: 9px;
+    background: url(button-gallery-next.png) no-repeat right center;
+}
+
 /* Threat status */
 .threat-status-indicator div {
     padding: 1em;

@@ -354,13 +354,15 @@
             for (var action in objects) {
                 switch (action.toString()) {
                     case 'next':
-                        objects[action].click(function() {
+                        objects[action].click(function(e) {
                             self.next(true);
+                            e.preventDefault();
                         });
                         break;
                     case 'previous':
-                        objects[action].click(function() {
+                        objects[action].click(function(e) {
                             self.previous(true);
+                            e.preventDefault();
                         });
                         break;
                 }

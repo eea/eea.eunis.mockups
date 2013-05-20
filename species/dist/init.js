@@ -4,7 +4,7 @@
         // Species slider gallery
         var buttons = {
             previous : $('.gallery-slider-controls .button-prev'),
-            next     : $('.gallery-slider-controls .button-prev')
+            next     : $('.gallery-slider-controls .button-next')
         };
 
         $('.gallery-slider').lofJSliderNews(
@@ -16,7 +16,7 @@
                 opacityClass    : 'lof-opacity',
                 auto            : true,
                 buttons			: buttons,
-                mainWidth       : 470,
+                mainWidth       : 475,
                 wrapperSelector  : '.gallery-slider-wrapper-inner',
                 toggleElement   : '#dummy'
 
