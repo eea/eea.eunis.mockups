@@ -59,8 +59,7 @@
     height: 97%;
     overflow: hidden;
     position: relative;
-    width: 100%;
-    z-index: 3px;
+    z-index: 3;
 }
 
 #content .gallery-slider-wrapper-inner,
