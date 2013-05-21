@@ -156,7 +156,7 @@
 }
 
 #content .threat-status-vu a {
-    color: #8E004D;
+    color: #810046;
 }
 
 /* Endangered threat status */
@@ -172,11 +172,11 @@
 }
 
 #content .threat-status-cr a {
-    color: #ea9999;
+    color: #FFF;
 }
 
 #content .threat-status-cr a:hover {
-    color: #FF9090 !important; /* important because of override from base.css */
+    color: #FFD !important; /* important because of override from base.css */
 }
 
 /* Extinct in the Wild threat status */
@@ -185,9 +185,17 @@
     color: #FFF;
 }
 
+#content .threat-status-ew a {
+    color: #FFF;
+}
+
 /* Extinct threat status */
 .threat-status-ex {
     background-color: #000;
+    color: #FFF;
+}
+
+#content .threat-status-ex a {
     color: #FFF;
 }
 
