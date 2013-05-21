@@ -23,6 +23,10 @@
 .float-right {
     float: right;
 }
+
+.contain-float {
+    overflow: hidden;
+}
 .bold p {
     font-size: 110%;
 }
@@ -32,6 +36,10 @@
 
 .firstParagraph {
     margin-top: 3em;
+}
+
+.footer {
+    margin: 0.5em;
 }
 
 
@@ -55,8 +63,8 @@
     z-index: 3px;
 }
 
-.gallery-slider-wrapper-inner,
-#content .gallery-slider-wrapper-inner {
+#content .gallery-slider-wrapper-inner,
+.gallery-slider-wrapper-inner {
     margin: 0;
     margin-left: 0;
     overflow: hidden;
@@ -91,15 +99,27 @@
 .gallery-slider .button-prev {
     background: url(button-gallery-previous.png) no-repeat left center;
     left: 0px;
+    opacity: 0.8;
 }
+
 .gallery-slider .button-next {
     background: url(button-gallery-next.png) no-repeat right center;
     right: 9px;
+    opacity: 0.8;
+}
+
+.gallery-slider .button-next:hover,
+.gallery-slider .button-prev:hover {
+    opacity: 1;
 }
 
 /* Threat status */
 .threat-status-indicator div {
     padding: 1em;
+}
+
+.threat-status-indicator .footer {
+    padding: 0;
 }
 
 .threat-status-indicator .roundedCorners {
