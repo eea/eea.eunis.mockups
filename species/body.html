@@ -102,23 +102,25 @@
                 </div>
 
                 <div class='right-column-area'>
-                    <h2>Quick Facts</h2>
-                    <div class='bold'>
-                        <p class='firstParagraph'>First named <span class='h1'>1824</span>
-                            as "Felis pardina" by <a href='#'>Temminck</a></p>
+                    <div class='quickfacts'>
+                        <h2>Quick Facts</h2>
+                        <div class='bold'>
+                            <p class='firstParagraph'>First named <span class='h1'>1824</span>
+                                as "Felis pardina" by <a href='#'>Temminck</a></p>
 
-                        <p>It has <span class='h1'>5</span>
-                            <a href='#'>scientific synonyms</a> and
-                            <span class='h1'>22</span>
-                            <a href='#'>common names</a></p>
+                            <p>It has <span class='h1'>5</span>
+                                <a href='#'>scientific synonyms</a> and
+                                <span class='h1'>22</span>
+                                <a href='#'>common names</a></p>
 
-                        <p>Protected in  <span class='h1'>94</span>
-                            <a href='#'>sites in Europe</a>.</p>
+                            <p>Protected in  <span class='h1'>94</span>
+                                <a href='#'>sites in Europe</a>.</p>
 
-                        <p>Mentioned in <span class='h1'>5</span>
-                            <a href='#'>legal instruments</a>.</p>
-                        <p>Lives in <span class='h1'>3</span>
-                            <a href='#'>habitat types</a>.</p>
+                            <p>Mentioned in <span class='h1'>5</span>
+                                <a href='#'>legal instruments</a>.</p>
+                            <p>Lives in <span class='h1'>3</span>
+                                <a href='#'>habitat types</a>.</p>
+                        </div>
                     </div>
                 </div>
                 <div class='visualClear'></div>
@@ -337,6 +339,7 @@
                 </div>
 
                 <div class='right-column-area'>
+                    <div class='conservation-status'>
                     <h3>EU's Conservation status by geographical regions</h3>
 
                     <ul class="eea-tabs">
@@ -436,6 +439,7 @@
                             details</a>
                         <a href='#' class='float-right'>Other resources</a>
                     </div>
+                    </div>
                 </div>
 
                 <!-- END EEA Species Status -->
@@ -446,6 +450,7 @@
                     Europe</h2>
 
                 <div class='column-area'>
+                    <div class='protected-sites'>
                 <h3>Protected Sites (Natura 2000) - Table</h3>
                 <table id="listItem" summary="List of sites" style="height: 325px;"
                        class="sortable listing">
@@ -835,18 +840,21 @@
                 </tr>
                 </tbody>
                     </table>
+                    </div>
                 </div>
 
                 <div class='right-column-area'>
-                    <ul class="eea-tabs">
-                        <li>Protected sites - Map</li>
-                    </ul>
-                    <div class="eea-tabs-panels">
+                    <div class='protected-sites-map'>
+                        <ul class="eea-tabs">
+                            <li>Protected sites - Map</li>
+                        </ul>
+                        <div class="eea-tabs-panels">
 
-                        <div class="eea-tabs-panel">
-                            <img src='protected-sites-dummy.jpg' />
+                            <div class="eea-tabs-panel">
+                                <img src='protected-sites-dummy.jpg' />
+                            </div>
+
                         </div>
-
                     </div>
                 </div>
 
@@ -1003,54 +1011,56 @@
 
                 <h2>Areas where this species has been reported</h2>
                 <div class='column-area'>
-                    <fieldset>
-                        <legend><strong>Select layer</strong></legend>
+                    <div class='reported-areas-fieldset'>
+                        <fieldset>
+                            <legend><strong>Select layer</strong></legend>
 
-                        <label for="distribution-range">
-                            <input type="checkbox" name="checkbox"
-                               id="distribution-range">
-                            Distribution range(2012,
-                            source: Art 17 Habitat Directive)
-                        </label>
-                        <p class='discreet'>User friendly explanation on why
-                            one
-                            should select this data layer</p>
+                            <label for="distribution-range">
+                                <input type="checkbox" name="checkbox"
+                                       id="distribution-range">
+                                Distribution range(2012,
+                                source: Art 17 Habitat Directive)
+                            </label>
+                            <p class='discreet'>User friendly explanation on why
+                                one
+                                should select this data layer</p>
 
-                        <label>
-                            <input type="checkbox" name="checkbox2">
-                            Distribution range(2010, source: IUCN)
-                        </label>
-                        <p class='discreet'>User friendly explanation on why
-                            one
-                            should select this data layer</p>
+                            <label>
+                                <input type="checkbox" name="checkbox2">
+                                Distribution range(2010, source: IUCN)
+                            </label>
+                            <p class='discreet'>User friendly explanation on why
+                                one
+                                should select this data layer</p>
 
-                        <label>
-                            <input type="checkbox" name="checkbox3">
-                            Single observations (1800-now, source: GBIF)
-                        </label>
-                        <p class='discreet'>User friendly explanation on why
-                            one
-                            should select this data layer</p>
-                        <label>
-                            <input type="checkbox" name="checkbox4">
-                            Protected sites where species is reported(2011,
-                            source: Natura 2000)
-                        </label>
-                        <p class='discreet'>User friendly explanation on why
-                            one
-                            should select this data layer</p>
+                            <label>
+                                <input type="checkbox" name="checkbox3">
+                                Single observations (1800-now, source: GBIF)
+                            </label>
+                            <p class='discreet'>User friendly explanation on why
+                                one
+                                should select this data layer</p>
+                            <label>
+                                <input type="checkbox" name="checkbox4">
+                                Protected sites where species is reported(2011,
+                                source: Natura 2000)
+                            </label>
+                            <p class='discreet'>User friendly explanation on why
+                                one
+                                should select this data layer</p>
 
-                        <p>Base map - not species related</p>
-                        <label>
-                            <input type="checkbox" name="checkbox5">
-                            All nationally designated sites (2012, source:
-                            CDDA)
-                        </label>
-                        <p class='discreet'>User friendly explanation on why
-                            one
-                            should select this data layer</p>
+                            <p>Base map - not species related</p>
+                            <label>
+                                <input type="checkbox" name="checkbox5">
+                                All nationally designated sites (2012, source:
+                                CDDA)
+                            </label>
+                            <p class='discreet'>User friendly explanation on why
+                                one
+                                should select this data layer</p>
 
-                    </fieldset>
+                        </fieldset>
+                    </div>
                 </div>
 
                 <div class='right-column-area'>
@@ -1075,172 +1085,173 @@
                 <!-- END EEA Species reported -->
 
                 <!-- EEA Habitat types -->
+                <div class='habitat-types'>
+                    <h2 class='visualClear'>Habitat types populated by species</h2>
+                    <table summary="Open the statistical data for"
+                           class="listing fullwidth">
+                        <thead>
+                        <tr>
+                            <th style="text-align: left; cursor: pointer;"><img
+                                    src="http://www.eea.europa.eu/arrowBlank.gif"
+                                    height="6" width="9">
+                                EUNIS Code
+                                <img src="http://www.eea.europa.eu/arrowUp.gif"
+                                     height="6" width="9"></th>
+                            <th style="text-align: left; cursor: pointer;"><img
+                                    src="http://www.eea.europa.eu/arrowBlank.gif"
+                                    height="6" width="9">
+                                ANNEX I Code
+                                <img src="http://www.eea.europa.eu/arrowBlank.gif"
+                                     height="6" width="9"></th>
+                            <th style="text-align: left; cursor: pointer;"><img
+                                    src="http://www.eea.europa.eu/arrowBlank.gif"
+                                    height="6" width="9">
+                                Habitat type name
+                                <img src="http://www.eea.europa.eu/arrowBlank.gif"
+                                     height="6" width="9"></th>
+                            <th style="text-align: left; cursor: pointer;"><img
+                                    src="http://www.eea.europa.eu/arrowBlank.gif"
+                                    height="6" width="9">
+                                Biogeographic region
+                                <img src="http://www.eea.europa.eu/arrowBlank.gif"
+                                     height="6" width="9"></th>
+                            <th style="text-align: left; cursor: pointer;"><img
+                                    src="http://www.eea.europa.eu/arrowBlank.gif"
+                                    height="6" width="9">
+                                Abundance
+                                <img src="http://www.eea.europa.eu/arrowBlank.gif"
+                                     height="6" width="9"></th>
+                            <th style="text-align: left; cursor: pointer;"><img
+                                    src="http://www.eea.europa.eu/arrowBlank.gif"
+                                    height="6" width="9">
+                                Frequencies
+                                <img src="http://www.eea.europa.eu/arrowBlank.gif"
+                                     height="6" width="9"></th>
+                            <th style="text-align: left; cursor: pointer;"><img
+                                    src="http://www.eea.europa.eu/arrowBlank.gif"
+                                    height="6" width="9">
+                                Faithfulness
+                                <img src="http://www.eea.europa.eu/arrowBlank.gif"
+                                     height="6" width="9"></th>
+                            <th style="text-align: left; cursor: pointer;"><img
+                                    src="http://www.eea.europa.eu/arrowBlank.gif"
+                                    height="6" width="9">
+                                Species status
+                                <img src="http://www.eea.europa.eu/arrowBlank.gif"
+                                     height="6" width="9"></th>
+                            <th style="text-align: left; cursor: pointer;"><img
+                                    src="http://www.eea.europa.eu/arrowBlank.gif"
+                                    height="6" width="9">
+                                Comment
+                                <img src="http://www.eea.europa.eu/arrowBlank.gif"
+                                     height="6" width="9"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
 
-                <h2 class='visualClear'>Habitat types populated by species</h2>
-                <table summary="Open the statistical data for"
-                       class="listing fullwidth">
-                    <thead>
-                    <tr>
-                        <th style="text-align: left; cursor: pointer;"><img
-                                src="http://www.eea.europa.eu/arrowBlank.gif"
-                                height="6" width="9">
-                            EUNIS Code
-                            <img src="http://www.eea.europa.eu/arrowUp.gif"
-                                 height="6" width="9"></th>
-                        <th style="text-align: left; cursor: pointer;"><img
-                                src="http://www.eea.europa.eu/arrowBlank.gif"
-                                height="6" width="9">
-                            ANNEX I Code
-                            <img src="http://www.eea.europa.eu/arrowBlank.gif"
-                                 height="6" width="9"></th>
-                        <th style="text-align: left; cursor: pointer;"><img
-                                src="http://www.eea.europa.eu/arrowBlank.gif"
-                                height="6" width="9">
-                            Habitat type name
-                            <img src="http://www.eea.europa.eu/arrowBlank.gif"
-                                 height="6" width="9"></th>
-                        <th style="text-align: left; cursor: pointer;"><img
-                                src="http://www.eea.europa.eu/arrowBlank.gif"
-                                height="6" width="9">
-                            Biogeographic region
-                            <img src="http://www.eea.europa.eu/arrowBlank.gif"
-                                 height="6" width="9"></th>
-                        <th style="text-align: left; cursor: pointer;"><img
-                                src="http://www.eea.europa.eu/arrowBlank.gif"
-                                height="6" width="9">
-                            Abundance
-                            <img src="http://www.eea.europa.eu/arrowBlank.gif"
-                                 height="6" width="9"></th>
-                        <th style="text-align: left; cursor: pointer;"><img
-                                src="http://www.eea.europa.eu/arrowBlank.gif"
-                                height="6" width="9">
-                            Frequencies
-                            <img src="http://www.eea.europa.eu/arrowBlank.gif"
-                                 height="6" width="9"></th>
-                        <th style="text-align: left; cursor: pointer;"><img
-                                src="http://www.eea.europa.eu/arrowBlank.gif"
-                                height="6" width="9">
-                            Faithfulness
-                            <img src="http://www.eea.europa.eu/arrowBlank.gif"
-                                 height="6" width="9"></th>
-                        <th style="text-align: left; cursor: pointer;"><img
-                                src="http://www.eea.europa.eu/arrowBlank.gif"
-                                height="6" width="9">
-                            Species status
-                            <img src="http://www.eea.europa.eu/arrowBlank.gif"
-                                 height="6" width="9"></th>
-                        <th style="text-align: left; cursor: pointer;"><img
-                                src="http://www.eea.europa.eu/arrowBlank.gif"
-                                height="6" width="9">
-                            Comment
-                            <img src="http://www.eea.europa.eu/arrowBlank.gif"
-                                 height="6" width="9"></th>
-                    </tr>
-                    </thead>
-                    <tbody>
+                        <tr class="zebraodd">
+                            <td>
+                                E7.3
+                            </td>
+                            <td>
 
-                    <tr class="zebraodd">
-                        <td>
-                            E7.3
-                        </td>
-                        <td>
+                            </td>
+                            <td>
+                                <a href="habitats/393">Dehesa</a>
+                            </td>
+                            <td>
+                                Biogeographic region not detailed in original data
+                                set
+                            </td>
+                            <td>
 
-                        </td>
-                        <td>
-                            <a href="habitats/393">Dehesa</a>
-                        </td>
-                        <td>
-                            Biogeographic region not detailed in original data
-                            set
-                        </td>
-                        <td>
+                            </td>
+                            <td>
 
-                        </td>
-                        <td>
+                            </td>
+                            <td>
 
-                        </td>
-                        <td>
+                            </td>
+                            <td>
+                                Mentioned to characterise habitat
+                            </td>
+                            <td>
+                                Species mentioned in habitat definition as
+                                characterising
+                            </td>
+                        </tr>
 
-                        </td>
-                        <td>
-                            Mentioned to characterise habitat
-                        </td>
-                        <td>
-                            Species mentioned in habitat definition as
-                            characterising
-                        </td>
-                    </tr>
+                        <tr class="zebraeven">
+                            <td>
+                                F5.5A1
+                            </td>
+                            <td>
 
-                    <tr class="zebraeven">
-                        <td>
-                            F5.5A1
-                        </td>
-                        <td>
+                            </td>
+                            <td>
+                                <a href="habitats/3533">Southern Andalusian "monte
+                                    blanco"</a>
+                            </td>
+                            <td>
+                                Biogeographic region not detailed in original data
+                                set
+                            </td>
+                            <td>
 
-                        </td>
-                        <td>
-                            <a href="habitats/3533">Southern Andalusian "monte
-                                blanco"</a>
-                        </td>
-                        <td>
-                            Biogeographic region not detailed in original data
-                            set
-                        </td>
-                        <td>
+                            </td>
+                            <td>
 
-                        </td>
-                        <td>
+                            </td>
+                            <td>
 
-                        </td>
-                        <td>
+                            </td>
+                            <td>
+                                Mentioned to characterise habitat
+                            </td>
+                            <td>
+                                Species mentioned in habitat definition as
+                                characterising
+                            </td>
+                        </tr>
 
-                        </td>
-                        <td>
-                            Mentioned to characterise habitat
-                        </td>
-                        <td>
-                            Species mentioned in habitat definition as
-                            characterising
-                        </td>
-                    </tr>
+                        <tr class="zebraodd">
+                            <td>
 
-                    <tr class="zebraodd">
-                        <td>
+                            </td>
+                            <td>
+                                6310
+                            </td>
+                            <td>
+                                <a href="habitats/10129">Dehesas with evergreen
+                                    Quercus spp</a>
+                            </td>
+                            <td>
+                                Biogeographic region not detailed in original data
+                                set
+                            </td>
+                            <td>
 
-                        </td>
-                        <td>
-                            6310
-                        </td>
-                        <td>
-                            <a href="habitats/10129">Dehesas with evergreen
-                                Quercus spp</a>
-                        </td>
-                        <td>
-                            Biogeographic region not detailed in original data
-                            set
-                        </td>
-                        <td>
+                            </td>
+                            <td>
 
-                        </td>
-                        <td>
+                            </td>
+                            <td>
 
-                        </td>
-                        <td>
+                            </td>
+                            <td>
+                                Mentioned to characterise habitat
+                            </td>
+                            <td>
+                                Species mentioned in habitat definition as
+                                characterising
+                            </td>
+                        </tr>
 
-                        </td>
-                        <td>
-                            Mentioned to characterise habitat
-                        </td>
-                        <td>
-                            Species mentioned in habitat definition as
-                            characterising
-                        </td>
-                    </tr>
+                        </tbody>
+                    </table>
 
-                    </tbody>
-                  </table>
-
-                <!-- END EEA Habitat types -->
+                    <!-- END EEA Habitat types -->
+                </div>
             </div>
 
         </div>

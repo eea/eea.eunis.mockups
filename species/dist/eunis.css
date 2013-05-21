@@ -16,6 +16,10 @@
     font-weight: bold;
 }
 
+.quickfact-number {
+    font-size: 300%;
+}
+
 .text-right {
     text-align: right;
 }
@@ -234,12 +238,12 @@
 }
 
 .table-definition-target {
-    background: url("http://www.eea.europa.eu/accordion_up.png") no-repeat scroll 94% center #346F83;
+    background: url("http://www.eea.europa.eu/accordion_down.png") no-repeat scroll 94% center #346F83;
     padding-right: 2.5em;
 }
 
 .table-definition-target.opened {
-    background: url("http://www.eea.europa.eu/accordion_down.png") no-repeat scroll 94% center #346F83;
+    background: url("http://www.eea.europa.eu/accordion_up.png") no-repeat scroll 94% center #346F83;
 }
 
 .overlay {
