@@ -1,23 +1,19 @@
 /* Base classes */
 
-.h1 {
+.large-text, quickfact-number {
     font-size: 300%;
 }
 
-.h2 {
+.medium-text {
     font-size: 200%;
 }
 
-.h3 {
+.small-text {
     font-size: 150%;
 }
 
 .bold {
     font-weight: bold;
-}
-
-.quickfact-number {
-    font-size: 300%;
 }
 
 .text-right {
