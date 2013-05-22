@@ -141,6 +141,7 @@
 
 #content .threat-status-indicator p {
     margin-bottom: 0;
+    line-height: 1.2em;
 }
 
 /* Unknown and Data Deficient threat status */
