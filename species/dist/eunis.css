@@ -126,6 +126,10 @@
     padding: 1em;
 }
 
+.threat-status-indicator .text-right {
+    padding: 0;
+}
+
 .threat-status-indicator .footer {
     padding: 0;
 }
@@ -219,6 +223,9 @@
 
 }
 
+.reported-areas .reported-areas-map {
+    margin-top: 2em;
+}
 
 /* overrides */
 
