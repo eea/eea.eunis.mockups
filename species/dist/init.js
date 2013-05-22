@@ -51,11 +51,11 @@
     function showDefinition(context) {
         var $context = $(context);
         if (!$context.hasClass('opened')) {
-            $context.parent().find('.table-definition-body').slideDown();
+            $context.closest('.table-definition').find('.table-definition-body').slideDown();
             $context.addClass('opened');
         }
         else {
-            $context.parent().find('.table-definition-body').slideUp();
+            $context.closest('.table-definition').find('.table-definition-body').slideUp();
             $context.removeClass('opened');
         }
     }
