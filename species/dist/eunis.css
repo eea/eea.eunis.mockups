@@ -1,6 +1,7 @@
 /* Base classes */
 
-.large-text, .quickfact-number {
+
+.large-text {
     font-size: 300%;
 }
 
@@ -40,6 +41,14 @@
 
 .footer {
     margin: 0.5em;
+}
+
+/* quick facts */
+
+.quickfact-number {
+    font-size: 300%;
+    color: #c0c0c0;
+    font-style: italic;
 }
 
 
