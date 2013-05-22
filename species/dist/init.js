@@ -30,7 +30,18 @@
         $('.threat-status-cr').find('a').prepOverlay({
             subtype: 'iframe'
         });
+        $("a").filter("[rel]").each(function(i) {
 
+            var position = $(this).offset();
+            $(this).overlay({
+                // common configuration for each overlay
+                oneInstance: false,
+                closeOnClick: true,
+                // setup custom finish position
+                top: position.top,
+                left: position.left
+            });
+        });
         // normal jquerytools overlay which checked the rel attribute for overlay
         // id to open on click
         $('.threat-status-vu').find('a').overlay();
