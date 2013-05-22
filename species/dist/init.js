@@ -9,7 +9,7 @@
 
         $('.gallery-slider').lofJSliderNews(
             {
-                interval        : 4000,
+                interval        : 10000,
                 direction		: 'slide', // use 'opacity' if you want items to fade
                 easing			: 'easeInOutQuad',
                 duration		: 1200,
@@ -30,8 +30,13 @@
         $('.threat-status-cr').find('a').prepOverlay({
             subtype: 'iframe'
         });
-        $("a").filter("[rel]").each(function(i) {
+        var $content = $("#content");
 
+        $("a").filter("[rel]").each(function () {
+
+            if (!$content.find(this.rel).hasClass('overlay')) {
+                return;
+            }
             var position = $(this).offset();
             $(this).overlay({
                 // common configuration for each overlay
@@ -42,9 +47,6 @@
                 left: position.left
             });
         });
-        // normal jquerytools overlay which checked the rel attribute for overlay
-        // id to open on click
-        $('.threat-status-vu').find('a').overlay();
 
     });
 
