@@ -213,9 +213,17 @@
 
 /* overrides */
 
-.column-area, .right-column-area {
+.left-area, .right-area {
     width: 48%;
+    float: left;
+    margin: 0 0;
+    padding: 0 1em 1em 0;
 }
+
+.right-area {
+    padding: 0 0 0 1em;
+}
+
 .listing th a, .listing th a:link, .listing th a:visited {
     color: #FFF !important;
 }
