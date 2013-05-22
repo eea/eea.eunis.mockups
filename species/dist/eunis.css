@@ -1,6 +1,6 @@
 /* Base classes */
 
-.large-text, quickfact-number {
+.large-text, .quickfact-number {
     font-size: 300%;
 }
 
