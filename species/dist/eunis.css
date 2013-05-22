@@ -1,5 +1,8 @@
 /* Base classes */
 
+h2 {
+    padding-top: 1em;
+}
 
 .large-text {
     font-size: 300%;
@@ -13,8 +16,15 @@
     font-size: 150%;
 }
 
+.x-small-text {
+    font-size: 120%;
+}
 .bold {
     font-weight: bold;
+}
+
+.bold p {
+    font-size: 110%;
 }
 
 .text-right {
@@ -27,9 +37,6 @@
 
 .contain-float {
     overflow: hidden;
-}
-.bold p {
-    font-size: 110%;
 }
 .inline-block, #content .inline-block {
     display: inline-block;
@@ -44,6 +51,11 @@
 }
 
 /* quick facts */
+
+.quickfacts h2 {
+    padding-top: 0;
+    margin-top: 0;
+}
 
 .quickfact-number {
     font-size: 300%;
