@@ -282,7 +282,6 @@ h2 {
 .sortable th span,
 .listing th span {
     display: inline;
-    float: left;
 }
 .sortable th a:link, .listing th a:link {
     float: left;
