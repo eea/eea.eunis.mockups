@@ -43,6 +43,9 @@
                 oneInstance: false,
                 closeOnClick: true,
                 // setup custom finish position
+                onBeforeLoad: function (e) {
+                    this.getOverlay().animate({top: e.clientY, left: e.clientX}, 500);
+                },
                 top: position.top,
                 left: position.left
             });

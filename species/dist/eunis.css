@@ -281,6 +281,8 @@ h2 {
 
 .overlay {
     background-color: #FFF;
+    padding: 1em;
+    border: 1px solid #005e7d;
 }
 
 #portal-breadcrumbs {
