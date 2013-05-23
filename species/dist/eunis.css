@@ -291,8 +291,10 @@ h2 {
 .listing th span {
     display: inline;
 }
+
 .sortable th a:link, .listing th a:link {
     float: left;
+    *float: none;
 }
 
 .overlay {
