@@ -42,6 +42,7 @@ h2 {
 .contain-float {
     overflow: hidden;
 }
+
 .inline-block, #content .inline-block {
     display: inline-block;
 }
@@ -295,6 +296,10 @@ h2 {
     background-color: #FFF;
     padding: 1em;
     border: 1px solid #005e7d;
+}
+
+.overlay table {
+    font-size: 110%;
 }
 
 
