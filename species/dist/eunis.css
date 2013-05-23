@@ -35,6 +35,10 @@ h2 {
     float: right;
 }
 
+.float-left {
+    float: left;
+}
+
 .contain-float {
     overflow: hidden;
 }
