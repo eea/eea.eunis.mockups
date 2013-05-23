@@ -42,6 +42,17 @@ h2 {
     display: inline-block;
 }
 
+.left-area, .right-area {
+    width: 48%;
+    float: left;
+    margin: 0 0;
+    padding: 0 1em 1em 0;
+}
+
+.right-area {
+    padding: 0 0 0 1em;
+}
+
 .firstParagraph {
     margin-top: 3em;
 }
@@ -49,6 +60,9 @@ h2 {
 .footer {
     margin: 0.5em;
 }
+
+
+/**** Sections ****/
 
 /* quick facts */
 
@@ -62,7 +76,6 @@ h2 {
     color: #c0c0c0;
     font-style: italic;
 }
-
 
 /* Slider Gallery */
 .gallery-slider {
@@ -116,6 +129,7 @@ h2 {
     width: 32px;
     z-index: 40;
 }
+
 .gallery-slider .button-prev {
     background: url(button-gallery-previous.png) no-repeat left center;
     left: 0px;
@@ -240,17 +254,25 @@ h2 {
     margin-top: 2em;
 }
 
-/* overrides */
-
-.left-area, .right-area {
-    width: 48%;
-    float: left;
-    margin: 0 0;
-    padding: 0 1em 1em 0;
+/* Table definition */
+.threat-status-indicator .table-definition {
+    padding: 0;
 }
 
-.right-area {
-    padding: 0 0 0 1em;
+.table-definition-target {
+    background: url("http://www.eea.europa.eu/accordion_down.png") no-repeat scroll 94% center #346F83;
+    padding-right: 2.5em;
+}
+
+.table-definition-target.opened {
+    background: url("http://www.eea.europa.eu/accordion_up.png") no-repeat scroll 94% center #346F83;
+}
+
+
+/**** Overrides ****/
+
+#portal-breadcrumbs {
+    font-weight: bold;
 }
 
 .listing th a, .listing th a:link, .listing th a:visited {
@@ -266,30 +288,18 @@ h2 {
     float: left;
 }
 
-.threat-status-indicator .table-definition {
-    padding: 0;
-}
-
-.table-definition-target {
-    background: url("http://www.eea.europa.eu/accordion_down.png") no-repeat scroll 94% center #346F83;
-    padding-right: 2.5em;
-}
-
-.table-definition-target.opened {
-    background: url("http://www.eea.europa.eu/accordion_up.png") no-repeat scroll 94% center #346F83;
-}
-
 .overlay {
     background-color: #FFF;
     padding: 1em;
     border: 1px solid #005e7d;
 }
 
-#portal-breadcrumbs {
-    font-weight: bold;
-}
 
-/* styles added temporarily from jquerytools.overlays since right now they are disabled on production */
+/**** Temporary overrides ****/
+
+/* styles added temporarily from jquerytools.overlays since right now they
+   are disabled on production */
+
 div.overlay {
     width: auto;
     height: auto;
