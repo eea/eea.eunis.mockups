@@ -41,7 +41,6 @@
                 // common configuration for each overlay
                 oneInstance: false,
                 closeOnClick: true,
-                fixed: false,
                 onBeforeLoad: function (e) {
                     var $overlay = this.getOverlay(),
                         $trigger, text, uppercase_text;
@@ -51,6 +50,10 @@
                         text = $trigger.text();
                         uppercase_text = text.charAt(0).toUpperCase() + text.substring(1, text.length);
                         $("<h3 />").attr({'class': 'overlay-title'}).html(uppercase_text).prependTo($overlay);
+                    }
+                    // wrap overlay content so that we can have a maximum height with overflow
+                    if (!$overlay.find('.overlay-body').length) {
+                        $overlay.children().wrapAll('<div class="overlay-body" />');
                     }
                 }
 

@@ -311,6 +311,11 @@ h2 {
     font-size: 175%;
 }
 
+.overlay-body {
+    max-height: 500px;
+    max-width: 600px;
+    overflow: auto;
+}
 
 /**** Temporary overrides ****/
 
