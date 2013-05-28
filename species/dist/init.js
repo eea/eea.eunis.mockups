@@ -41,6 +41,7 @@
                 // common configuration for each overlay
                 oneInstance: false,
                 closeOnClick: true,
+                top: 260,
                 onBeforeLoad: function (e) {
                     var $overlay = this.getOverlay(),
                         $trigger, text, uppercase_text;
