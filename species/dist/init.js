@@ -37,17 +37,23 @@
             if (!$content.find(this.rel).hasClass('overlay')) {
                 return;
             }
-            var position = $(this).offset();
             $(this).overlay({
                 // common configuration for each overlay
                 oneInstance: false,
                 closeOnClick: true,
-                // setup custom finish position
+                fixed: false,
                 onBeforeLoad: function (e) {
-                    this.getOverlay().animate({top: e.clientY, left: e.clientX}, 500);
-                },
-                top: position.top,
-                left: position.left
+                    var $overlay = this.getOverlay(),
+                        $trigger, text, uppercase_text;
+                    // create overlay title if not found in the overlay body
+                    if (!$overlay.find('.overlay-title').length) {
+                        $trigger = this.getTrigger();
+                        text = $trigger.text();
+                        uppercase_text = text.charAt(0).toUpperCase() + text.substring(1, text.length);
+                        $("<h3 />").attr({'class': 'overlay-title'}).html(uppercase_text).prependTo($overlay);
+                    }
+                }
+
             });
         });
 
