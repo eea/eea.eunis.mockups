@@ -104,6 +104,12 @@ h2 {
     z-index: 3;
 }
 
+.gallery-slider-wrapper img {
+    height: 267px;
+    width: auto;
+    text-align: center;
+}
+
 #content .gallery-slider-wrapper-inner,
 .gallery-slider-wrapper-inner {
     margin: 0;
@@ -111,6 +117,8 @@ h2 {
     overflow: hidden;
     padding: 0;
     position: absolute;
+    background-color: #000;
+    text-align: center;
 }
 
 #content .gallery-slider-wrapper-inner li,
@@ -142,6 +150,22 @@ h2 {
     background: url(button-gallery-previous.png) no-repeat left center;
     left: 0px;
     opacity: 0.8;
+}
+
+.gallery-slider-description {
+    background: #000;
+    color: #FFF;
+    padding: 0 1em;
+    opacity: 0.7;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.gallery-slider-description h3 {
+    color: #FFF;
+    text-shadow: none;
 }
 
 .gallery-slider .button-next {
