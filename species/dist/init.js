@@ -75,6 +75,13 @@
                     parent_height = Math.round((parent_width /4)*3);
                     gallery_width = $gallery_class === 'gallery_fancybox_view' ? 640 : parent_width;
                     gallery_height = $gallery_class === 'gallery_fancybox_view' ? 433 : parent_height;
+                    // added possibility to override the width and height of the gallery by passing in
+                    // a width and/or height to the gallery
+                    var gallery_style_attr = $this.attr('style');
+                    if (gallery_style_attr){
+                        gallery_width = gallery_style_attr.indexOf('width') !== -1 ? $this.width() : gallery_width;
+                        gallery_height = gallery_style_attr.indexOf('height') !== -1 ? $this.height() : gallery_height;
+                    }
 
                     var defaults = {
                         panel_width: gallery_width,
