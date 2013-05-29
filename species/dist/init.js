@@ -1,28 +1,6 @@
 (function($) {
     $(function() {
 
-        // Species slider gallery
-        var buttons = {
-            previous : $('.gallery-slider-controls .button-prev'),
-            next     : $('.gallery-slider-controls .button-next')
-        };
-
-        $('.gallery-slider').lofJSliderNews(
-            {
-                interval        : 10000,
-                direction		: 'slide', // use 'opacity' if you want items to fade
-                easing			: 'easeInOutQuad',
-                duration		: 1200,
-                opacityClass    : 'lof-opacity',
-                auto            : true,
-                buttons			: buttons,
-                mainWidth       : 475,
-                wrapperSelector  : '.gallery-slider-wrapper-inner',
-                toggleElement   : '#dummy'
-
-            }
-        );
-
         // table definition dropdown
         $('.table-definition-target').click(function () { showDefinition(this);});
 
