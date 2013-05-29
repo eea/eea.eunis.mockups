@@ -94,13 +94,19 @@
 
                     if ($this.hasClass('js-noFilmstrip')) {
                         defaults.show_filmstrip = false;
-                        defaults.pause_on_hover = true;
-                        defaults.hover_nav_buttons_images = false;
-                        defaults.keep_nav_buttons_visible = true;
-                        defaults.theme_path = '';
                     }
-
                     var options = $.extend(defaults, opts);
+                    var data_options = $this.data('options');
+                    if (data_options) {
+                        try {
+                            data_options = $.parseJSON(data_options);
+                            options = $.extend(data_options, options);
+                        }
+                        catch(e) {
+                            var console = window.console || { log: function() {} };
+                            console.log('Non Valid JSON passed as');
+                        }
+                    }
 
                     $this.galleryView(options);
                 });
