@@ -86,6 +86,19 @@ h2 {
 }
 
 /* Slider Gallery */
+
+.species .gallery {
+    height: 371px !important;
+}
+.species .gallery .panel .overlay-background {
+    display: none;
+}
+
+.species .gallery .panel-overlay > h3 {
+    color: #FFF;
+    text-shadow: none;
+}
+
 .gallery-slider {
     display: block;
     height: 275px;
@@ -353,14 +366,14 @@ div.overlay {
     display: none;
     /* some padding to layout nested elements nicely  */
     margin: 1em;
-    z-index: 99;
+    z-index: 999;
 }
 
 div.overlay-iframe,
 div.overlay-ajax {
     width: 60%;
     min-height: 100px;
-    z-index: 99; /* overlays should be above everything */
+    z-index: 999; /* overlays should be above everything */
 }
 
 div.overlay-iframe {
@@ -438,4 +451,44 @@ div.overlay .formTab.lastFormTab {
 div.overlay .formControls a {
     display: block;
     margin: 0.75em;
+}
+
+
+/* galleryView temporary overrides */
+.gallery .nav-next,
+.gallery .nav-prev,
+.gallery .nav-next-overlay,
+.gallery .nav-prev-overlay
+{
+    position: absolute;
+    z-index: 1100;
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.gallery .nav-next:hover,
+.gallery .nav-prev:hover {
+    opacity: 1;
+}
+
+.gallery .nav-next {
+    right: 10px;
+}
+
+.gallery .nav-prev {
+    left: 10px;
+}
+
+.gallery .nav-prev-overlay,
+.gallery .nav-next-overlay {
+    z-index: 1099;
+    opacity: 0.75;
+}
+
+.gallery .nav-next-overlay {
+    right: 0;
+}
+
+.gallery .nav-prev-overlay {
+    left: 0;
 }
