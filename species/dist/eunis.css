@@ -87,9 +87,6 @@ h2 {
 
 /* Slider Gallery */
 
-.species .gallery {
-    height: 371px !important;
-}
 .species .gallery .panel .overlay-background {
     display: none;
 }
@@ -461,7 +458,7 @@ div.overlay .formControls a {
 .gallery .nav-prev-overlay
 {
     position: absolute;
-    z-index: 1100;
+    z-index: 601;
     cursor: pointer;
     opacity: 0.75;
 }
@@ -481,7 +478,7 @@ div.overlay .formControls a {
 
 .gallery .nav-prev-overlay,
 .gallery .nav-next-overlay {
-    z-index: 1099;
+    z-index: 601;
     opacity: 0.75;
 }
 
