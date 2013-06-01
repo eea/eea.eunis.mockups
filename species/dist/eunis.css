@@ -126,10 +126,67 @@ h2 {
     color: #000;
 }
 
+/* Lower risk threat status */
+.threat-status-lr,
+#content .threat-status-lr a {
+    background-color: #ffb7b7;
+    color: #000;
+}
+
+.threat-status-lr-wk,
+#content .threat-status-lr-wk a {
+    background-color: #006666;
+    color: #FFF;
+}
+
+
+/* Lower risk least concerned threat status */
+.threat-status-lr-lc,
+#content .threat-status-lr-lc a {
+    background-color: #F9DFDE;
+    color: #000;
+}
+
+.threat-status-lr-lc-wk,
+#content .threat-status-lr-lc-wk a {
+    background-color: #006666;
+    color: #FFF;
+}
+
+/* Lower risk near threatened threat status */
+.threat-status-lr-nt {
+    background-color: #F2BFBB;
+    color: #000;
+}
+
+.threat-status-lr-nt-wk,
+#content .threat-status-lr-nt-wk a {
+    background-color: #006666;
+    color: #99cc99;
+}
+
+/* Lower risk conservation dependent threat status */
+.threat-status-lr-cd {
+    background-color: #F2BFBB;
+    color: #000;
+}
+
+.threat-status-lr-cd-wk,
+#content .threat-status-lr-cd-wk a {
+    background-color: #006666;
+    color: #99cc99;
+}
+
 /* Least Concern threat status */
 .threat-status-lc {
     background-color: #F9DFDE;
     color: #000;
+}
+
+.threat-status-lc-wk,
+#content .threat-status-lc-wk a {
+    background-color: #006666;
+    color: #FFF;
 }
 
 /* Near Threatened threat status */
@@ -138,10 +195,22 @@ h2 {
     color: #000;
 }
 
+.threat-status-nt-wk,
+#content .threat-status-nt-wk a {
+    background-color: #006666;
+    color: #99cc99;
+}
+
 /* Vulnerable threat status */
 .threat-status-vu {
     background-color: #EE9B93;
     color: #000;
+}
+
+.threat-status-vu-wk,
+#content .threat-status-vu-wk a {
+    background-color: #cc9900;
+    color: #ffffcc;
 }
 
 #content .threat-status-vu a {
@@ -154,18 +223,27 @@ h2 {
     color: #000;
 }
 
-/* Critically endangered threat status */
-.threat-status-cr {
-    background-color: #D52C27;
-    color: #FFF;
+.threat-status-en-wk,
+#content .threat-status-en-wk a {
+    background-color: #cc6633;
+    color: #ffcc99;
 }
 
+/* Critically endangered threat status */
+.threat-status-cr,
 #content .threat-status-cr a {
+    background-color: #D52C27;
     color: #FFF;
 }
 
 #content .threat-status-cr a:hover {
     color: #FFD !important; /* important because of override from base.css */
+}
+
+.threat-status-cr-wk,
+#content .threat-status-cr-wk a {
+    background-color: #cc3333;
+    color: #ffcccc;
 }
 
 /* Extinct in the Wild threat status */
@@ -178,6 +256,12 @@ h2 {
     color: #FFF;
 }
 
+.threat-status-ew-wk,
+#content .threat-status-ew-wk a {
+    background-color: #000;
+    color: #FFF;
+}
+
 /* Extinct threat status */
 .threat-status-ex {
     background-color: #000;
@@ -186,6 +270,12 @@ h2 {
 
 #content .threat-status-ex a {
     color: #FFF;
+}
+
+.threat-status-ex-wk,
+#content .threat-status-ex-wk a {
+    background-color: #000;
+    color: #cc3333;
 }
 
 .threat-status-region {
