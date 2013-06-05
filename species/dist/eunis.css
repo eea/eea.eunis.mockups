@@ -141,38 +141,38 @@ h2 {
 
 
 /* Lower risk least concerned threat status */
-.threat-status-lr-lc,
-#content .threat-status-lr-lc a {
+.threat-status-lri,
+#content .threat-status-lri a {
     background-color: #F9DFDE;
     color: #000;
 }
 
-.threat-status-lr-lc-wk,
-#content .threat-status-lr-lc-wk a {
+.threat-status-lri-wk,
+#content .threat-status-lri-wk a {
     background-color: #006666;
     color: #FFF;
 }
 
 /* Lower risk near threatened threat status */
-.threat-status-lr-nt {
+.threat-status-lrn {
     background-color: #F2BFBB;
     color: #000;
 }
 
-.threat-status-lr-nt-wk,
-#content .threat-status-lr-nt-wk a {
+.threat-status-lrn-wk,
+#content .threat-status-lrn-wk a {
     background-color: #006666;
     color: #99cc99;
 }
 
 /* Lower risk conservation dependent threat status */
-.threat-status-lr-cd {
+.threat-status-lrc {
     background-color: #F2BFBB;
     color: #000;
 }
 
-.threat-status-lr-cd-wk,
-#content .threat-status-lr-cd-wk a {
+.threat-status-lrc-wk,
+#content .threat-status-lrc-wk a {
     background-color: #006666;
     color: #99cc99;
 }
