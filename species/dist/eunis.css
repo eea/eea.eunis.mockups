@@ -85,6 +85,11 @@ h2 {
     font-style: italic;
 }
 
+/* left area, right area */
+.left-area a, .right-area a {
+    display: block;
+}
+
 /* Slider Gallery */
 
 .species .gallery .panel .overlay-background {
@@ -123,118 +128,93 @@ h2 {
 /* Unknown and Data Deficient threat status */
 .threat-status-un, .threat-status-dd {
     background-color: #D4D8D7;
-    color: #000;
 }
 
 /* Lower risk threat status */
-.threat-status-lr,
-#content .threat-status-lr a {
+.threat-status-lr {
     background-color: #ffb7b7;
-    color: #000;
 }
 
 /* Lower risk least concerned threat status */
-.threat-status-lri,
-#content .threat-status-lri a {
+.threat-status-lri {
     background-color: #F9DFDE;
-    color: #000;
 }
 
 /* Lower risk near threatened threat status */
 .threat-status-lrn {
     background-color: #F2BFBB;
-    color: #000;
 }
 
 /* Lower risk conservation dependent threat status */
 .threat-status-lrc {
     background-color: #F2BFBB;
-    color: #000;
 }
 
 /* Least Concern threat status */
 .threat-status-lc {
     background-color: #F9DFDE;
-    color: #000;
 }
 
 /* Near Threatened threat status */
 .threat-status-nt {
     background-color: #F2BFBB;
-    color: #000;
 }
 
 /* Vulnerable threat status */
 .threat-status-vu {
     background-color: #EE9B93;
-    color: #000;
-}
-
-#content .threat-status-vu a {
-    color: #810046;
 }
 
 /* Endangered threat status */
 .threat-status-en {
     background-color: #E2665C;
-    color: #000;
 }
 
 /* Critically endangered threat status */
-.threat-status-cr,
-#content .threat-status-cr a {
+.threat-status-cr {
     background-color: #D52C27;
-    color: #FFF;
-}
-
-#content .threat-status-cr a:hover {
-    color: #FFD !important; /* important because of override from base.css */
 }
 
 /* Extinct in the Wild threat status */
 .threat-status-ew {
     background-color: #A21D22;
-    color: #FFF;
-}
-
-#content .threat-status-ew a {
-    color: #FFF;
-}
-
-.threat-status-ew-wk,
-#content .threat-status-ew-wk a {
-    background-color: #000;
-    color: #FFF;
 }
 
 /* Extinct threat status */
 .threat-status-ex {
     background-color: #000;
-    color: #FFF;
 }
 
+/* set back as default for the threat status indicators */
+#content .threat-status-indicator,
+#content .threat-status-indicator a {
+    color: #000;
+}
+
+#content .threat-status-indicator a {
+    text-decoration: underline;
+}
+
+/* set white for threat statuses with darker backgrounds */
+#content .threat-status-cr a,
+#content .threat-status-ew a,
 #content .threat-status-ex a {
     color: #FFF;
 }
 
-#content .threat-status-ex a:hover {
-    color: #FF9D9D;
+/* no border for hover state of threat status */
+#content .threat-status-indicator a:hover {
+    text-decoration: none;
 }
 
-/* no border for hover state of threat status */
-#content .threat-status-lr a:hover,
-#content .threat-status-lrc a:hover,
-#content .threat-status-lrn a:hover,
-#content .threat-status-lri a:hover,
-#content .threat-status-lc a:hover,
-#content .threat-status-nt a:hover,
-#content .threat-status-vu a:hover,
+/* hover state change for status level from which the default eea hover color
+   is too strong */
 #content .threat-status-cr a:hover,
-#content .threat-status-en a:hover,
 #content .threat-status-ew a:hover,
 #content .threat-status-ex a:hover {
-    border: 0;
+    color: #F9DFDE !important;
 }
+
 /*.threat-status-region {*/
 
 /*}*/
