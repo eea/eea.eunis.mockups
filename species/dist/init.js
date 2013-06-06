@@ -4,10 +4,6 @@
         // table definition dropdown
         $('.table-definition-target').click(function () { showDefinition(this);});
 
-        // overlay helper from plone
-        $('.threat-status-cr').find('a').prepOverlay({
-            subtype: 'iframe'
-        });
         var $content = $("#content");
 
         $("a").filter("[rel]").each(function () {
