@@ -15,12 +15,20 @@ module.exports = function(grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['species/head.html', 
+        src: ['species/head.html',
               'species/header.html', 
               'species/body.html', 
-              'species/footer.html'],
-
+              'species/footer.html'
+             ],
         dest: 'species/dist/index.html'
+      },
+      homepage: {
+        src: ['species/head.html',
+              'species/header.html',
+              'species/body-homepage.html',
+              'species/footer.html'
+             ],
+        dest: 'species/dist/homepage.html'
       }
     },
     jshint: {
@@ -50,7 +58,7 @@ module.exports = function(grunt) {
     },
     watch: {
       concat: {
-        files: '<%= concat.dist.src %>',
+        files: ['species/*.html'],
         tasks: ['concat']
       }
     }
