@@ -386,6 +386,11 @@ div.overlay .formControls a {
 
 
 /* galleryView temporary overrides */
+
+.gallery {
+    visibility: hidden;
+}
+
 .gallery .nav-next,
 .gallery .nav-prev,
 .gallery .nav-next-overlay,
