@@ -70,7 +70,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task.
-  grunt.registerTask('default', ['concat']);
+  grunt.registerTask('default', ['concat:homepage']);
 
 };
 
