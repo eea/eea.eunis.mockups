@@ -774,6 +774,91 @@
 
 <!-- visual portal wrapper -->
 <div id="visual-portal-wrapper">
+    <h1>EUNIS - Nature information at your service</h1>
+
+    <div class="detected-location">
+        <p>Detected location: <span>Seville</span></p>
+        <a href="#">change location</a>
+        <a href="#">disable location (Europe's overview mode)</a>
+    </div>
+    <!-- threatened gallery -->
+    <div class="gallery-threatened width-10 float-left">
+        <p>Most threatened species around your location (70km range)</p>
+        <div id="promo-gallery-wrapper">
+            <div id="gallery-content-outer">
+                <ul id="promo-gallery-content" class="lof-opacity">
+                    <li>
+                        <a href="http://test.tripledev.ee/eunis2013/species/1442" title=">Lynx pardinus">
+                            <img alt="Greenhouse gas emission trends (CSI 010) - Assessment published May 2013" src="lynx.jpg" title=">Lynx pardinus">
+                        </a>
+
+                        <div class="promo-item-desc">
+                            <h3>Iberian lynx <span>Lynx pardinus</span></h3>
+                            <h3><a href="http://test.tripledev.ee/eunis2013/species/1442">CR: Critically endangered</a></h3>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="http://test.tripledev.ee/eunis2013/species/1442" title="Canis aureus">
+                            <img alt="Greenhouse gas emission trends (CSI 010) - Assessment published May 2013" src="canis.jpg" title=">Canis aureus">
+                        </a>
+
+                        <div class="promo-item-desc">
+                            <h3>golden jackal <span>canis aureus</span></h3>
+                            <h3><a href="http://test.tripledev.ee/eunis2013/species/1442">NT: Near Threatened</a></h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- navigation outer -->
+
+        <div id="navigator-outer">
+                <ul id="promo-navigator">
+                    <li>
+                        <div>
+                            <img alt="Greenhouse gas emission trends (CSI 010) - Assessment published May 2013" src="lynx.jpg" title="Greenhouse gas emission trends (CSI 010) - Assessment published May 2013">
+                            <h3>Lynx pardinus</h3>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div>
+                            <img alt="Socio-economic projections for the European Union" src="canis.jpg" title="Socio-economic projections for the European Union">
+                            <h3>Canis aureus</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="controls">
+                <a href="#" id="next-promo"></a>
+                <a href="#" id="prev-promo"></a>
+                <a href="#" id="play-pause" title="Pause slideshow" class="pause disabled" aria-pressed="true" role="button">Pause</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="width-6 float-right">
+        <ul class="eea-tabs">
+            <li>Species</li>
+            <li>Sites</li>
+            <li>Habitat types</li>
+        </ul>
+        <div class="eea-tabs-panels">
+            <div class="eea-tabs-panel">
+                <p>Search among <span>357376</span> species of which <span>43276</span> are protected in Europe.</p>
+                <form method="get" id="faceted-text-search" class="searchforms faceted-external-search" action="http://www.eea.europa.eu/data-and-maps/find/global">
+                    <label>
+                        <input type="text" name="c12" title="eg. Canis Lupus"
+                               value="">
+                    </label>
+                    <input type="submit" value="Search" name="find" class="standardButton">
+                    <p class="text-right"><a href="#">advanced search</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
 
 </div>
 <!-- END visual portal wrapper -->
