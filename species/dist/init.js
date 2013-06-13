@@ -15,8 +15,8 @@
                 // common configuration for each overlay
                 oneInstance: false,
                 closeOnClick: true,
-                top: 260,
-                onBeforeLoad: function (e) {
+                top: '15%',
+                onBeforeLoad: function () {
                     var $overlay = this.getOverlay(),
                         $trigger, text, uppercase_text;
                     // create overlay title if not found in the overlay body
