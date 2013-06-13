@@ -1,0 +1,21 @@
+/* Promo gallery */
+#gallery-content-outer {
+  width: 72.3%; }
+
+#promo-gallery-content {
+  width: 100%; }
+
+#promo-gallery-content li {
+  text-align: center;
+  background-color: black;
+  width: 100%; }
+
+#promo-gallery-content li img {
+  height: 100%;
+  width: auto; }
+
+.width-6-1\3a 2 {
+  width: 37.5%; }
+
+.mt2 {
+  margin-top: 2em; }
