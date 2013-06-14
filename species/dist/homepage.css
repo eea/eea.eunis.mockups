@@ -14,6 +14,45 @@
   height: 100%;
   width: auto; }
 
+.threat-status-text li {
+  font-size: 120%;
+  font-weight: bold;
+  margin: 0 1em; }
+
+.threat-status-text i {
+  display: inline-block; }
+
+.favourable {
+  color: #ff9f0f; }
+
+.unfavourable {
+  color: #a31919; }
+
+.extincted {
+  color: black; }
+
+.unfavourable .selected,
+.favourable .selected,
+.extincted .selected {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 15px solid #ff9f0f; }
+
+.unfavourable .selected {
+  border-bottom-color: #a31919; }
+
+.extincted .selected {
+  border-bottom-color: black; }
+
+#play-pause {
+  float: left;
+  margin-left: 2em; }
+
+.controls > a {
+  float: left; }
+
 .width-6-1\3a 2 {
   width: 37.5%; }
 
