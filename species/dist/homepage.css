@@ -14,10 +14,26 @@
   height: 100%;
   width: auto; }
 
-.threat-status-text li {
+#promo-gallery-content .promo-item-desc {
+  text-align: right; }
+
+#promo-gallery-content .promo-item-desc h3 {
+  color: #FFF; }
+
+#promo-gallery-content .promo-item-desc p {
+  display: inline-block;
+  padding: 0.5em 2em; }
+
+.promo-item-desc a {
+  color: #FFF;
+  font-size: 120%;
+  text-shadow: 1px 1px 1px black; }
+
+#content .threat-status-text li {
   font-size: 120%;
   font-weight: bold;
-  margin: 0 1em; }
+  margin: 0 1em;
+  display: inline-block; }
 
 .threat-status-text i {
   display: inline-block; }
