@@ -8,14 +8,14 @@
 
  * @version		2.1 cleanup by ichim-david
  */
-// JavaScript Document
+
 (function($) {
-    $.fn.lofJSliderNews = function(settings) {
+    $.fn.lofJSlider = function(settings) {
         return this.each(function() {
-            return new $.lofSliderNews(this, settings);
+            return new $.lofSlider(this, settings);
         });
     };
-    $.lofSliderNews = function(obj, settings) {
+    $.lofSlider = function(obj, settings) {
         this.settings = {
             direction: '',
             mainItemSelector: 'li',
@@ -23,7 +23,7 @@
             navSelector: 'li',
             navigatorEvent: 'click', /* click|mouseenter */
             wrapperSelector: '.sliders-wrap-inner',
-            wrapperOuter: 'gallery-slider-wrapper',
+            wrapperOuter: '.gallery-slider-wrapper',
             interval: 5000,
             auto: false, // whether to automatic play the slideshow
             maxItemDisplay: 3,
@@ -80,23 +80,21 @@
         this.navigratorStep = this.__getPositionMode(this.settings.navPosition);
         this.directionMode = this.__getDirectionMode();
 
-
         if (this.settings.direction === 'opacity') {
             this.wrapper.addClass('lof-opacity');
             $(this.slides).css({
                 'opacity': 0,
                 'z-index': 1
             }).eq(this.currentNo).css({
-                'opacity': 1,
-                'z-index': 3
-            });
+                    'opacity': 1,
+                    'z-index': 3
+                });
         } else {
             this.wrapper.css({
                 'left': '-' + this.currentNo * this.maxSize + 'px',
                 'width': (this.maxWidth) * this.slides.length
             });
         }
-
 
         if (this.settings.isPreloaded) {
             this.preLoadImage(this.onComplete);
@@ -137,10 +135,10 @@
             }
         });
     };
-    $.lofSliderNews.fn = $.lofSliderNews.prototype;
-    $.lofSliderNews.fn.extend = $.lofSliderNews.extend = $.extend;
+    $.lofSlider.fn = $.lofSlider.prototype;
+    $.lofSlider.fn.extend = $.lofSlider.extend = $.extend;
 
-    $.lofSliderNews.fn.extend({
+    $.lofSlider.fn.extend({
 
         startUp: function(obj, wrapper) {
             var self = this;
@@ -248,14 +246,14 @@
             }
             for (var action in objects) {
                 if (objects.hasOwnProperty(action)) {
-                     switch (action.toString()) {
-                         case 'next':
-                             objects[action].click(next);
-                             break;
-                         case 'previous':
-                             objects[action].click(previous);
-                             break;
-                     }
+                    switch (action.toString()) {
+                        case 'next':
+                            objects[action].click(next);
+                            break;
+                        case 'previous':
+                            objects[action].click(previous);
+                            break;
+                    }
                 }
             }
             return this;
