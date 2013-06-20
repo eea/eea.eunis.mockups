@@ -1,102 +1,3 @@
-
-/*! Copyright (c) 2011 Brandon Aaron (http://brandonaaron.net)
- * Licensed under the MIT License (LICENSE.txt).
- *
- * Thanks to: http://adomas.org/javascript-mouse-wheel/ for some pointers.
- * Thanks to: Mathias Bank(http://www.mathias-bank.de) for a scope bug fix.
- * Thanks to: Seamus Leahy for adding deltaX and deltaY
- *
- * Version: 3.0.6
- *
- * Requires: 1.2.2+
- */
-
-(function($) {
-
-    var types = ['DOMMouseScroll', 'mousewheel'];
-
-    if ($.event.fixHooks) {
-        for (var i = types.length; i;) {
-            $.event.fixHooks[types[--i]] = $.event.mouseHooks;
-        }
-    }
-
-    $.event.special.mousewheel = {
-        setup: function() {
-            if (this.addEventListener) {
-                for (var i = types.length; i;) {
-                    this.addEventListener(types[--i], handler, false);
-                }
-            } else {
-                this.onmousewheel = handler;
-            }
-        },
-
-        teardown: function() {
-            if (this.removeEventListener) {
-                for (var i = types.length; i;) {
-                    this.removeEventListener(types[--i], handler, false);
-                }
-            } else {
-                this.onmousewheel = null;
-            }
-        }
-    };
-
-    $.fn.extend({
-        mousewheel: function(fn) {
-            return fn ? this.bind("mousewheel", fn) : this.trigger("mousewheel");
-        },
-
-        unmousewheel: function(fn) {
-            return this.unbind("mousewheel", fn);
-        }
-    });
-
-
-    function handler(event) {
-        var orgEvent = event || window.event,
-            args = [].slice.call(arguments, 1),
-            delta = 0,
-            returnValue = true,
-            deltaX = 0,
-            deltaY = 0;
-        event = $.event.fix(orgEvent);
-        event.type = "mousewheel";
-
-        // Old school scrollwheel delta
-        if (orgEvent.wheelDelta) {
-            delta = orgEvent.wheelDelta / 120;
-        }
-        if (orgEvent.detail) {
-            delta = -orgEvent.detail / 3;
-        }
-
-        // New school multidimensional scroll (touchpads) deltas
-        deltaY = delta;
-
-        // Gecko
-        if (orgEvent.axis !== undefined && orgEvent.axis === orgEvent.HORIZONTAL_AXIS) {
-            deltaY = 0;
-            deltaX = -1 * delta;
-        }
-
-        // Webkit
-        if (orgEvent.wheelDeltaY !== undefined) {
-            deltaY = orgEvent.wheelDeltaY / 120;
-        }
-        if (orgEvent.wheelDeltaX !== undefined) {
-            deltaX = -1 * orgEvent.wheelDeltaX / 120;
-        }
-
-        // Add event and delta to the front of the arguments
-        args.unshift(event, delta, deltaX, deltaY);
-
-        return ($.event.dispatch || $.event.handle).apply(this, args);
-    }
-
-})(jQuery);
-
 /**
  * @version		2.0
  * @package		jquery
@@ -104,13 +5,14 @@
  * @copyright	Copyright (C) JAN 2010 LandOfCoder.com <@emai:landofcoder@gmail.com>. All rights reserved.
  * @website     http://landofcoder.com
  * @license		This plugin is dual-licensed under the GNU General Public License and the MIT License
+
+ * @version		2.1 cleanup by ichim-david
  */
 // JavaScript Document
 (function($) {
     $.fn.lofJSliderNews = function(settings) {
         return this.each(function() {
-            // get instance of the lofSiderNew.
-            new $.lofSliderNews(this, settings);
+            return new $.lofSliderNews(this, settings);
         });
     };
     $.lofSliderNews = function(obj, settings) {
@@ -121,12 +23,12 @@
             navSelector: 'li',
             navigatorEvent: 'click', /* click|mouseenter */
             wrapperSelector: '.sliders-wrap-inner',
+            wrapperOuter: 'gallery-slider-wrapper',
             interval: 5000,
             auto: false, // whether to automatic play the slideshow
             maxItemDisplay: 3,
             startItem: 0,
-            navPosition: 'vertical',
-            /* values: horizontal|vertical*/
+            navPosition: 'vertical', /* values: horizontal|vertical*/
             navigatorHeight: 100,
             navigatorWidth: 310,
             duration: 600,
@@ -142,14 +44,12 @@
         this.previousNo = null;
         this.maxWidth = this.settings.mainWidth || 684;
 
-
-
         this.wrapper = $(obj).find(this.settings.wrapperSelector);
         var wrapOuter = $('<div class="gallery-slider-wrapper"></div>').width(this.maxWidth);
         this.wrapper.wrap(wrapOuter);
 
         this.slides = this.wrapper.find(this.settings.mainItemSelector);
-        if (!this.wrapper.length || !this.slides.length) return;
+        if (!this.wrapper.length || !this.slides.length) { return; }
         // set width of wrapper
         if (this.settings.maxItemDisplay > this.slides.length) {
             this.settings.maxItemDisplay = this.slides.length;
@@ -160,7 +60,7 @@
         this.navigatorInner = this.navigatorOuter.find(this.settings.navInnerSelector);
         // use automatic calculate width of navigator
 
-        if (this.settings.navigatorHeight == null || this.settings.navigatorWidth == null) {
+        if (this.settings.navigatorHeight === null || this.settings.navigatorWidth === null) {
             this.settings.navigatorHeight = this.navigatorItems.eq(0).outerWidth(true);
             this.settings.navigatorWidth = this.navigatorItems.eq(0).outerHeight(true);
 
@@ -246,19 +146,18 @@
             var self = this;
 
             this.navigatorItems.each(function(index, item) {
-                $(item).bind(self.settings.navigatorEvent, (function() {
+                $(item).bind(self.settings.navigatorEvent, function() {
                     self.jumping(index, true);
                     self.setNavActive(index, item);
-                }));
+                });
                 $(item).css({
                     'height': self.settings.navigatorHeight,
                     'width': self.settings.navigatorWidth
                 });
             });
-            this.registerWheelHandler(this.navigatorOuter, this);
             this.setNavActive(this.currentNo);
             this.settings.onComplete(this.slides.eq(this.currentNo), this.currentNo);
-            if (this.settings.buttons && typeof(this.settings.buttons) == "object") {
+            if (this.settings.buttons && typeof(this.settings.buttons) === "object") {
                 this.registerButtonsControl('click', this.settings.buttons, this);
 
             }
@@ -304,7 +203,7 @@
         navigationAnimate: function(currentIndex) {
             if (currentIndex <= this.settings.startItem || currentIndex - this.settings.startItem >= this.settings.maxItemDisplay - 1) {
                 this.settings.startItem = currentIndex - this.settings.maxItemDisplay + 2;
-                if (this.settings.startItem < 0) this.settings.startItem = 0;
+                if (this.settings.startItem < 0) { this.settings.startItem = 0; }
                 if (this.settings.startItem > this.slides.length - this.settings.maxItemDisplay) {
                     this.settings.startItem = this.slides.length - this.settings.maxItemDisplay;
                 }
@@ -323,7 +222,7 @@
             }
         },
         __getPositionMode: function(position) {
-            if (position == 'horizontal') {
+            if (position === 'horizontal') {
                 return ['left', this.settings.navigatorWidth];
             }
             return ['top', this.settings.navigatorHeight];
@@ -338,33 +237,25 @@
                     return ['left', 'width'];
             }
         },
-        registerWheelHandler: function(element, obj) {
-            element.bind('mousewheel', function(event, delta) {
-                var dir = delta > 0 ? 'Up' : 'Down',
-                    vel = Math.abs(delta);
-                if (delta > 0) {
-                    obj.previous(true);
-                } else {
-                    obj.next(true);
-                }
-                return false;
-            });
-        },
         registerButtonsControl: function(eventHandler, objects, self) {
+            function next(e) {
+                self.next(true);
+                e.preventDefault();
+            }
+            function previous(e) {
+                self.next(true);
+                e.preventDefault();
+            }
             for (var action in objects) {
-                switch (action.toString()) {
-                    case 'next':
-                        objects[action].click(function(e) {
-                            self.next(true);
-                            e.preventDefault();
-                        });
-                        break;
-                    case 'previous':
-                        objects[action].click(function(e) {
-                            self.previous(true);
-                            e.preventDefault();
-                        });
-                        break;
+                if (objects.hasOwnProperty(action)) {
+                     switch (action.toString()) {
+                         case 'next':
+                             objects[action].click(next);
+                             break;
+                         case 'previous':
+                             objects[action].click(previous);
+                             break;
+                     }
                 }
             }
             return this;
@@ -421,7 +312,7 @@
         },
         jumping: function(no, manual) {
             this.stop();
-            if (this.currentNo == no) return;
+            if (this.currentNo === no) { return; }
             var obj = eval("({'" + this.directionMode[0] + "':-" + (this.maxSize * no) + "})");
             this.onProcessing(null, manual, 0, this.maxSize)
                 .fxStart(no, obj, this)
@@ -452,7 +343,7 @@
             }, delay);
         },
         stop: function() {
-            if (this.isRun == null) { return; }
+            if (this.isRun === null) { return; }
             clearTimeout(this.isRun);
             this.isRun = null;
         }
