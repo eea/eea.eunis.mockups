@@ -118,6 +118,33 @@
             nav_position = site_address ? 'horizontal' : 'vertical',
             nav_outer_selector = site_address ? "#navigator-outer-sm" : "#navigator-outer";
 
+        var threat_levels = {
+            "favourable"   : ["threat-status-vu", "threat-status-nt", "threat-status-lc",
+                             "threat-status-lrc", "threat-status-lrn", "threat-status-lrl",
+                             "threat-status-lr", "threat-status-un", "threat-status-dd"],
+
+            "unfavourable" : ["threat-status-cr", "threat-status-en"],
+
+            "extincted"   : ["threat-status-ex", "threat-status-ew"]
+        };
+
+        function onComplete(slider) {
+            var threat_class = slider.find('.promo-item-desc p').attr('class'),
+                $gallery = $(slider.context),
+                $threat_status = $gallery.find('.threat-status-text'),
+                level;
+            $threat_status.find('li').removeClass('selected');
+//            $threat_status.find(dave.favorable).addClass('selected');
+            for ( level in threat_levels ) {
+                debugger;
+                if ( threat_levels[level].indexOf(threat_class) !== -1 ) {
+                    $threat_status.find('.' + level).addClass('selected');
+                }
+
+            }
+
+        }
+
         var settings = {
             interval            : 9000,
             direction           : 'opacity',
@@ -134,7 +161,8 @@
             caption             : '.promo-item-desc',
             opacityClass        : 'lof-opacity',
             buttons             : buttons,
-            mainWidth           : "100%"
+            mainWidth           : "100%",
+            onComplete          : onComplete
         };
 
         $('#promo-gallery-wrapper').lofJSlider(settings);
