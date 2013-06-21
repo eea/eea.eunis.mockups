@@ -136,11 +136,11 @@
             $threat_status.find('li').removeClass('selected');
 //            $threat_status.find(dave.favorable).addClass('selected');
             for ( level in threat_levels ) {
-                debugger;
-                if ( threat_levels[level].indexOf(threat_class) !== -1 ) {
-                    $threat_status.find('.' + level).addClass('selected');
+                if (threat_levels.hasOwnProperty(level)) {
+                    if ( threat_levels[level].indexOf(threat_class) !== -1 ) {
+                        $threat_status.find('.' + level).addClass('selected');
+                    }
                 }
-
             }
 
         }
