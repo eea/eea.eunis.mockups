@@ -27,7 +27,32 @@
 .promo-item-desc a {
   color: #FFF;
   font-size: 120%;
-  text-shadow: 1px 1px 1px black; }
+  text-shadow: 1px 1px 1px #000; }
+
+.action-start,
+.action-stop,
+#prev-promo,
+#next-promo {
+  background: transparent url("http://eea.europa.eu/sprite-eeaimages.png") no-repeat scroll top right; }
+
+#next-promo {
+  background-position: -438px -192px; }
+
+#prev-promo {
+  background-position: -421px -192px;
+  margin-left: 1.5em; }
+
+.action-start {
+  background-position: -446px -215px;
+  padding-left: 25px; }
+
+.gallery-slider-controls {
+  margin-left: 16px;
+  height: 25px; }
+
+.action-stop {
+  background-position: -454px -190px;
+  padding-left: 16px; }
 
 #content .threat-status-text li {
   font-size: 120%;
@@ -72,5 +97,16 @@
 .width-6-1\3a 2 {
   width: 37.5%; }
 
+.mt4 {
+  margin-top: 3em; }
+
+.mt3 {
+  margin-top: 3em; }
+
 .mt2 {
   margin-top: 2em; }
+
+.mt1 {
+  margin-top: 1em; }
+
+/*# sourceMappingURL=homepage.css.map */
