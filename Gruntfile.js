@@ -15,20 +15,20 @@ module.exports = function(grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['species/head.html',
-              'species/header.html', 
-              'species/body.html', 
-              'species/footer.html'
+        src: ['species/raw/templates/head.html',
+              'species/raw/templates/header.html', 
+              'species/raw/markup/body-species.html', 
+              'species/raw/templates/footer.html'
              ],
-        dest: 'species/dist/index.html'
+        dest: 'species/dist/markup/species.html'
       },
       homepage: {
-        src: ['species/head.html',
-              'species/header.html',
-              'species/body-homepage.html',
-              'species/footer.html'
+        src: ['species/raw/templates/head.html',
+              'species/raw/templates/header.html',
+              'species/raw/markup/body-homepage.html',
+              'species/raw/templates/footer.html'
              ],
-        dest: 'species/dist/homepage.html'
+        dest: 'species/dist/markup/homepage.html'
       }
     },
     jshint: {
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
     },
     watch: {
       concat: {
-        files: ['species/*.html'],
+        files: ['species/raw/**/*.html'],
         tasks: ['concat']
       }
     }
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task.
-  grunt.registerTask('default', ['concat:homepage']);
+  grunt.registerTask('default', ['concat:homepage', 'concat:dist']);
 
 };
 

@@ -2,3 +2,6 @@
 /redesign-2013/
 .tern-port
 .c9revisions/
+.sass-cache/
+*.scss
+*.map
