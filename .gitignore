@@ -3,5 +3,5 @@
 .tern-port
 .c9revisions/
 .sass-cache/
-.sass
-.map
+*.scss
+*.map

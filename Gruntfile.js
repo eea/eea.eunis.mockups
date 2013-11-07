@@ -17,15 +17,15 @@ module.exports = function(grunt) {
       dist: {
         src: ['species/raw/templates/head.html',
               'species/raw/templates/header.html', 
-              'species/raw/templates/body.html', 
+              'species/raw/markup/body-species.html', 
               'species/raw/templates/footer.html'
              ],
-        dest: 'species/dist/markup/index.html'
+        dest: 'species/dist/markup/species.html'
       },
       homepage: {
         src: ['species/raw/templates/head.html',
               'species/raw/templates/header.html',
-              'species/raw/templates/body-homepage.html',
+              'species/raw/markup/body-homepage.html',
               'species/raw/templates/footer.html'
              ],
         dest: 'species/dist/markup/homepage.html'
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
     },
     watch: {
       concat: {
-        files: ['species/*.html'],
+        files: ['species/raw/**/*.html'],
         tasks: ['concat']
       }
     }
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task.
-  grunt.registerTask('default', ['concat:homepage']);
+  grunt.registerTask('default', ['concat:homepage', 'concat:dist']);
 
 };
 
